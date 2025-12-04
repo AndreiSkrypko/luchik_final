@@ -66,6 +66,53 @@
   height: 100%;
   object-fit: contain;
   display: block;
+  animation: sunGlow 8s ease-in-out infinite;
+  filter: drop-shadow(0 0 40px rgba(255, 200, 0, 0.25));
+}
+
+@keyframes sunGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 40px rgba(255, 200, 0, 0.25)) 
+            drop-shadow(0 0 60px rgba(255, 180, 0, 0.18))
+            drop-shadow(0 0 80px rgba(255, 160, 0, 0.12));
+  }
+  50% {
+    filter: drop-shadow(0 0 45px rgba(255, 220, 100, 0.3)) 
+            drop-shadow(0 0 65px rgba(255, 200, 80, 0.22))
+            drop-shadow(0 0 85px rgba(255, 180, 60, 0.15));
+  }
+}
+
+.sunContainer::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 220, 100, 0.15) 0%,
+    rgba(255, 200, 50, 0.1) 30%,
+    rgba(255, 180, 30, 0.06) 60%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  animation: sunRipple 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes sunRipple {
+  0%, 100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1.03);
+  }
 }
 
 /* Облако №1 слева, как в дизайне */
@@ -77,6 +124,24 @@
   pointer-events: none;
 }
 
+/* Пчела слева внизу */
+.bee {
+  position: absolute;
+  bottom: calc(60px - 6cm);
+  left: 80px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* Облако 2 справа внизу */
+.cloudTwo {
+  position: absolute;
+  bottom: calc(60px - 8cm);
+  right: 60px;
+  z-index: 4;
+  pointer-events: none;
+}
+
 /* Основной заголовок под облаком, как на макете */
 .mainTitleSection {
   margin-top: -350px; /* поднимаем ещё выше, под шапку */
@@ -84,6 +149,10 @@
   z-index: 2;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .mainTitleImage {
@@ -91,6 +160,7 @@
   max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
   filter: saturate(0.8) brightness(1.05); /* чуть более пастельный оттенок */
 }
 
@@ -99,10 +169,12 @@
   margin-top: 32px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  gap: 32px;
+  align-items: center;
   position: relative;
   z-index: 2;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .subtitleText {
@@ -112,12 +184,18 @@
   line-height: 1.5;
   color: #272727;
   text-align: center;
+  margin: 0;
+  position: relative;
 }
 
 .ladybug {
+  position: absolute;
   width: 72px;
   height: auto;
-  transform: translate(20px, -8px); /* правее и выше относительно текста */
+  left: calc(50% + 200px);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 /* Кнопка «Оставить заявку» под подзаголовком */
@@ -125,8 +203,12 @@
   margin-top: 32px;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 2;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .ctaButton {
@@ -135,6 +217,8 @@
   background: transparent;
   padding: 0;
   cursor: pointer;
+  margin: 0 auto;
+  display: block;
 }
 
 .ctaButtonImage {
@@ -189,16 +273,37 @@
 
 .navTextLink {
   font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #6F7A8D; /* более пастельный серо-синий */
+  font-size: 16px;
+  font-weight: 700;
+  color: #4A5568;
   text-decoration: none;
   white-space: nowrap;
-  transition: color 0.15s ease;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+  position: relative;
+  display: inline-block;
 }
 
 .navTextLink:hover {
   color: #FF6B35;
+  transform: translateY(-2px);
+}
+
+.navTextLink::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background: linear-gradient(90deg, #FF6B35, #FFD700);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navTextLink:hover::after {
+  transform: scaleX(1);
 }
 
 .navbarRight {

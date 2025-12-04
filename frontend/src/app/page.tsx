@@ -115,6 +115,28 @@ export default function Home() {
             />
           </div>
 
+          {/* Пчела слева внизу */}
+          <div className={styles.bee}>
+            <Image
+              src="/img/bee.svg"
+              alt="Пчела"
+              width={88}
+              height={92}
+              priority
+            />
+          </div>
+
+          {/* Облако 2 справа внизу */}
+          <div className={styles.cloudTwo}>
+            <Image
+              src="/img/cloud-2.svg"
+              alt="Облако"
+              width={200}
+              height={120}
+              priority
+            />
+          </div>
+
           <div className={styles.sunContainer}>
             <Image 
               src="/img/sun.svg" 
