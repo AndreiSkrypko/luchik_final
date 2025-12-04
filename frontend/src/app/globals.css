@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #2D3748;
+  --luchik-blue: #E5F5FF;
+  --luchik-pink: #FFE5F1;
+  --luchik-green: #E5FFE5;
+  --luchik-yellow: #FFD700;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #2D3748;
+  --luchik-blue: #E5F5FF;
+  --luchik-pink: #FFE5F1;
+  --luchik-green: #E5FFE5;
+  --luchik-yellow: #FFD700;
+}
+
