@@ -44,8 +44,8 @@ export default function Home() {
               <a href="#schedule" className={styles.navTextLink}>
                 Расписание
               </a>
-              <a href="#subscriptions" className={styles.navTextLink}>
-                Абонементы
+              <a href="/trainers" className={styles.navTextLink}>
+                Тренажеры 
               </a>
               <button 
                 onClick={toggleContacts}
