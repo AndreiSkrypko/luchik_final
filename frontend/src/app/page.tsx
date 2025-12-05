@@ -197,84 +197,36 @@ export default function Home() {
           <div className={styles.contactsOverlay} onClick={closeContacts} />
           <div className={`${styles.contactsPanel} ${isContactsOpen ? styles.contactsPanelOpen : ''}`}>
             <div className={styles.contactsPanelHeader}>
-              <h2 className={styles.contactsPanelTitle}>Контакты</h2>
-              <button 
-                className={styles.contactsPanelClose}
-                onClick={closeContacts}
-                aria-label="Закрыть"
-              >
-                ×
-              </button>
+              <div className={styles.contactsCloudContainer}>
+                <Image
+                  src="/img/облако-белое.svg"
+                  alt="Облако"
+                  width={250}
+                  height={125}
+                  className={styles.contactsCloud}
+                />
+                <h2 className={styles.contactsPanelTitle}>Контакты</h2>
+                <Image
+                  src="/img/малое-облако.svg"
+                  alt="Малое облако"
+                  width={110}
+                  height={60}
+                  className={styles.smallCloud}
+                />
+              </div>
             </div>
             <div className={styles.contactsPanelContent}>
-              <div className={styles.contactItem}>
-                <div className={styles.contactIcon}>📞</div>
-                <div className={styles.contactInfo}>
-                  <h3 className={styles.contactLabel}>Телефон</h3>
-                  <a href="tel:+79991234567" className={styles.contactValue}>
-                    +7 (999) 123-45-67
-                  </a>
-                </div>
-              </div>
-              <div className={styles.contactItem}>
-                <div className={styles.contactIcon}>✉️</div>
-                <div className={styles.contactInfo}>
-                  <h3 className={styles.contactLabel}>Email</h3>
-                  <a href="mailto:info@luchik.ru" className={styles.contactValue}>
-                    info@luchik.ru
-                  </a>
-                </div>
-              </div>
-              <div className={styles.contactItem}>
-                <div className={styles.contactIcon}>📍</div>
-                <div className={styles.contactInfo}>
-                  <h3 className={styles.contactLabel}>Адрес</h3>
-                  <p className={styles.contactValue}>
-                    г. Москва, ул. Примерная, д. 1
-                  </p>
-                </div>
-              </div>
-              <div className={styles.contactItem}>
-                <div className={styles.contactIcon}>🕐</div>
-                <div className={styles.contactInfo}>
-                  <h3 className={styles.contactLabel}>Режим работы</h3>
-                  <p className={styles.contactValue}>
-                    Пн-Пт: 9:00 - 20:00<br />
-                    Сб-Вс: 10:00 - 18:00
-                  </p>
-                </div>
-              </div>
-              <div className={styles.contactsSocials}>
-                <h3 className={styles.contactsSocialsTitle}>Мы в соцсетях</h3>
-                <div className={styles.contactsSocialsLinks}>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.contactsSocialLink}
-                    aria-label="Мы в Instagram"
-                  >
-                    Instagram
-                  </a>
-                  <a
-                    href="https://vk.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.contactsSocialLink}
-                    aria-label="Мы во ВКонтакте"
-                  >
-                    ВКонтакте
-                  </a>
-                  <a
-                    href="https://ok.ru"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.contactsSocialLink}
-                    aria-label="Мы в Одноклассниках"
-                  >
-                    Одноклассники
-                  </a>
-                </div>
+              <div className={styles.contactsFrame}>
+                <svg 
+                  width="291" 
+                  height="225" 
+                  viewBox="0 0 291 225" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={styles.contactsFrameImage}
+                >
+                  <rect opacity="0.65" width="291" height="225" rx="22" fill="white"/>
+                </svg>
               </div>
             </div>
           </div>
