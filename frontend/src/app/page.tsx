@@ -398,6 +398,20 @@ export default function Home() {
               height={60}
               className={styles.footerLogoImage}
             />
+            <Image
+              src="/img/footer/pchela.svg"
+              alt="Пчела"
+              width={60}
+              height={60}
+              className={styles.footerBee}
+            />
+            <Image
+              src="/img/footer/oblako1.svg"
+              alt="Облако"
+              width={80}
+              height={50}
+              className={styles.footerCloud}
+            />
           </div>
         </div>
         <div className={styles.footerGrass}>
