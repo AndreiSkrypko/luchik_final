@@ -380,6 +380,37 @@ export default function Home() {
         </>
       )}
 
+      {/* Полоса-разделитель перед футером */}
+      <div className={styles.footerDivider}>
+        <svg width="1303" height="2" viewBox="0 0 1303 2" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.dividerImage} style={{ width: '100%', maxWidth: '1303px', height: '2px' }}>
+          <line x1="1" y1="1" x2="1302" y2="1.00011" stroke="#DADADA" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+      </div>
+
+      {/* Футер */}
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <div className={styles.footerLogo}>
+            <Image
+              src="/img/footer/logo.svg"
+              alt="Логотип Лучик"
+              width={180}
+              height={60}
+              className={styles.footerLogoImage}
+            />
+          </div>
+        </div>
+        <div className={styles.footerGrass}>
+          <Image
+            src="/img/footer/grass.svg"
+            alt="Трава"
+            width={1440}
+            height={100}
+            className={styles.footerGrassImage}
+          />
+        </div>
+      </footer>
+
     </main>
   );
 }

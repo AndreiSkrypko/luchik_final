@@ -922,3 +922,74 @@
     padding: 24px;
   }
 }
+
+/* Полоса-разделитель перед футером */
+.footerDivider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  margin-bottom: 40px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+  background: transparent;
+}
+
+.dividerImage {
+  width: 100%;
+  max-width: 1303px;
+  height: 2px;
+  display: block;
+  min-height: 2px;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+/* Футер */
+.footer {
+  width: 100%;
+  padding: 20px 40px 0;
+  box-sizing: border-box;
+  background: transparent;
+  position: relative;
+}
+
+.footerContent {
+  max-width: 1303px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+}
+
+.footerLogoImage {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+
+.footerGrass {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.footerGrassImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: bottom;
+}
