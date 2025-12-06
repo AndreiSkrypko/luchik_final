@@ -28,6 +28,7 @@ export default function Home() {
                 width={260}
                 height={80}
                 priority
+                loading="eager"
               />
             </div>
           </a>
@@ -100,7 +101,7 @@ export default function Home() {
               width={1480}
               height={338}
               className={styles.cloudsImage}
-              priority
+              loading="lazy"
             />
           </div>
 
@@ -111,7 +112,7 @@ export default function Home() {
               alt="Облако"
               width={174}
               height={138}
-              priority
+              loading="lazy"
             />
           </div>
 
@@ -122,7 +123,7 @@ export default function Home() {
               alt="Пчела"
               width={88}
               height={92}
-              priority
+              loading="lazy"
             />
           </div>
 
@@ -133,7 +134,7 @@ export default function Home() {
               alt="Облако"
               width={200}
               height={120}
-              priority
+              loading="lazy"
             />
           </div>
 
@@ -144,7 +145,7 @@ export default function Home() {
               width={100} 
               height={100}
               className={styles.sun}
-              priority
+              loading="lazy"
             />
           </div>
         </div>
@@ -158,6 +159,7 @@ export default function Home() {
           height={176}
           className={styles.mainTitleImage}
           priority
+          loading="eager"
         />
       </section>
 
@@ -173,7 +175,7 @@ export default function Home() {
           width={80}
           height={80}
           className={styles.ladybug}
-          priority
+          loading="lazy"
         />
       </section>
 
@@ -185,7 +187,7 @@ export default function Home() {
             width={371}
             height={82}
             className={styles.ctaButtonImage}
-            priority
+            loading="lazy"
           />
           <span className={styles.ctaButtonText}>ОСТАВИТЬ ЗАЯВКУ</span>
         </button>
