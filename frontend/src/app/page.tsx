@@ -195,7 +195,7 @@ export default function Home() {
       {isContactsOpen && (
         <>
           <div className={styles.contactsOverlay} onClick={closeContacts} />
-          <div className={`${styles.contactsPanel} ${isContactsOpen ? styles.contactsPanelOpen : ''}`}>
+          <div className={styles.contactsPanel}>
             <div className={styles.contactsPanelHeader}>
               <div className={styles.contactsCloudContainer}>
                 <Image
