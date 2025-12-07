@@ -6,6 +6,8 @@ import { useState } from "react";
 
 export default function Home() {
   const [isContactsOpen, setIsContactsOpen] = useState(false);
+  const [isFooterMenuOpen, setIsFooterMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleContacts = () => {
     setIsContactsOpen(!isContactsOpen);
@@ -35,21 +37,21 @@ export default function Home() {
 
           {/* Навигация и кнопка «Контакты» */}
           <nav className={styles.navbarRow} aria-label="Основная навигация">
-            <div className={styles.navLinks}>
-              <a href="#about" className={styles.navTextLink}>
+            <div className={`${styles.navLinks} ${isMobileMenuOpen ? styles.navLinksOpen : ''}`}>
+              <a href="#about" className={styles.navTextLink} onClick={() => setIsMobileMenuOpen(false)}>
                 О нас
               </a>
-              <a href="#directions" className={styles.navTextLink}>
+              <a href="#directions" className={styles.navTextLink} onClick={() => setIsMobileMenuOpen(false)}>
                 Направления
               </a>
-              <a href="/gallery" className={styles.navTextLink}>
+              <a href="/gallery" className={styles.navTextLink} onClick={() => setIsMobileMenuOpen(false)}>
                 Галерея
               </a>
-              <a href="/trainers" className={styles.navTextLink}>
+              <a href="/trainers" className={styles.navTextLink} onClick={() => setIsMobileMenuOpen(false)}>
                 Тренажеры 
               </a>
               <button 
-                onClick={toggleContacts}
+                onClick={() => { toggleContacts(); setIsMobileMenuOpen(false); }}
                 className={styles.navTextLink}
                 style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
               >
@@ -107,6 +109,25 @@ export default function Home() {
               </div>
             </div>
           </nav>
+
+          {/* Бургер меню справа вверху */}
+          <button 
+            className={`${styles.mobileMenuButton} ${isMobileMenuOpen ? styles.mobileMenuButtonOpen : ''}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Меню"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          {/* Overlay для закрытия меню */}
+          {isMobileMenuOpen && (
+            <div 
+              className={styles.mobileMenuOverlay}
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+          )}
 
           {/* Большие тучи по низу шапки */}
           <div className={styles.clouds}>
@@ -439,6 +460,15 @@ export default function Home() {
           </div>
           <div className={styles.footerNav}>
           <div className={styles.footerNavLeft}>
+            <button 
+              className={styles.footerBurger}
+              onClick={() => setIsFooterMenuOpen(!isFooterMenuOpen)}
+              aria-label="Меню"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
             <Image
               src="/img/footer/oblako2.svg"
               alt="Облако 2"
@@ -470,16 +500,16 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className={styles.footerNavLinks}>
+            <div className={`${styles.footerNavLinks} ${isFooterMenuOpen ? styles.footerNavLinksOpen : ''}`}>
               <div className={styles.footerNavLinksColumn}>
-                <a href="#about" className={styles.footerNavLink}>О нас</a>
-                <a href="#directions" className={styles.footerNavLink}>Направления</a>
-                <a href="/gallery" className={styles.footerNavLink}>Галерея</a>
+                <a href="#about" className={styles.footerNavLink} onClick={() => setIsFooterMenuOpen(false)}>О нас</a>
+                <a href="#directions" className={styles.footerNavLink} onClick={() => setIsFooterMenuOpen(false)}>Направления</a>
+                <a href="/gallery" className={styles.footerNavLink} onClick={() => setIsFooterMenuOpen(false)}>Галерея</a>
               </div>
               <div className={styles.footerNavLinksColumn}>
-                <a href="/trainers" className={styles.footerNavLink}>Тренажеры</a>
+                <a href="/trainers" className={styles.footerNavLink} onClick={() => setIsFooterMenuOpen(false)}>Тренажеры</a>
                 <button 
-                  onClick={toggleContacts}
+                  onClick={() => { toggleContacts(); setIsFooterMenuOpen(false); }}
                   className={styles.footerNavLink}
                   style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, textAlign: 'left' }}
                 >
