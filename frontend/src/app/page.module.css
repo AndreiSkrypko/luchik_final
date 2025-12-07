@@ -1336,7 +1336,9 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-bottom: 40px;
+  padding-bottom: 0;
+  position: relative;
+  gap: 100px;
 }
 
 .footerLogo {
@@ -1365,6 +1367,130 @@
   margin-top: 50px;
 }
 
+.footerNav {
+  display: flex;
+  flex: 1;
+  padding: 0 20px;
+  gap: 0;
+  background: white;
+  border-top: none;
+  margin-left: 150px;
+}
+
+.footerNavLeft {
+  flex: 0 0 250px;
+  padding-right: 30px;
+}
+
+.footerNavRight {
+  flex: 1;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footerNavDivider {
+  width: 1px;
+  background: #DADADA;
+  margin: 0 20px;
+}
+
+.footerNavItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #E8F4FD;
+  border: 1px solid #B8D9F0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footerNavItem:hover {
+  background: #D6E7F9;
+  transform: translateX(2px);
+}
+
+.footerNavIcon {
+  width: 23px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.footerNavText {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.footerNavLink {
+  padding: 8px 0;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #777777;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.footerNavLink::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #DADADA;
+}
+
+.footerNavLink:hover {
+  color: #333;
+}
+
+.footerNavLink:nth-last-child(2),
+.footerNavLink:last-child {
+  padding-left: 30px;
+}
+
+.footerAddress {
+  font-size: 16px;
+  color: #777777;
+  line-height: 1.6;
+}
+
+.footerSchedule {
+  font-size: 16px;
+  color: #777777;
+  line-height: 1.6;
+}
+
+.footerSocials {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footerSocialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.footerSocialLink:hover {
+  transform: scale(1.1);
+}
+
+.footerSocialIcon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .footerGrass {
   width: 100vw;
   position: relative;
@@ -1384,4 +1510,34 @@
   display: block;
   object-fit: cover;
   object-position: top;
+}
+
+.footerBushLeft {
+  position: absolute;
+  bottom: -20px;
+  left: 20%;
+  z-index: 2;
+  width: 178px;
+  height: auto;
+  object-fit: contain;
+}
+
+.footerBushRight {
+  position: absolute;
+  bottom: 5px;
+  right: 20%;
+  z-index: 2;
+  width: 178px;
+  height: auto;
+  object-fit: contain;
+}
+
+.footerGrassText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 440px;
+  height: 16px;
 }
