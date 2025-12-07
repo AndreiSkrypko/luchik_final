@@ -65,8 +65,8 @@
 /* Солнце */
 .sunContainer {
   position: absolute;
-  top: -40px;
-  right: -40px;
+  top: -155px;
+  right: -135px;
   z-index: 5;
   width: 600px;
   height: 600px;
@@ -506,32 +506,42 @@
 
 /* Блок соцсетей справа в шапке */
 .socials {
-  position: relative;
-  width: 96px;
-  height: 24px;
-}
-
-.socialsImage {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.socialsLinks {
-  position: absolute;
-  inset: 0;
   display: flex;
-  justify-content: space-between;
+  gap: 8px;
   align-items: center;
 }
 
 .socialIconLink {
-  width: 24px;
-  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: transparent;
-  text-indent: -9999px; /* скрываем текст, зона только клика */
   cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  flex-shrink: 0;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.socialIconLink:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.socialIconLink:active {
+  transform: scale(0.95);
+}
+
+.socialIcon {
+  width: 32px;
+  height: 32px;
+  display: block;
+  flex-shrink: 0;
+  pointer-events: none;
+  object-fit: contain;
 }
 
 /* Hero Section - контейнер для абсолютно позиционированных элементов */
@@ -715,7 +725,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/img/фон-волны.svg');
+  background-image: url('/img/main/фон-волны.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -992,26 +1002,40 @@
 }
 
 .contactsSocialIconContainer {
-  position: relative;
-  width: 96px;
-  height: 24px;
-}
-
-.contactsSocialsImage {
-  display: block;
-  width: 100%;
-  height: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
 }
 
 .contactsSocialIconLink {
-  position: absolute;
-  top: 0;
-  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: transparent;
-  text-indent: -9999px;
   cursor: pointer;
-  z-index: 1;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.contactsSocialIconLink:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.contactsSocialIconLink:active {
+  transform: scale(0.95);
+}
+
+.contactsSocialIcon {
+  width: 32px;
+  height: 32px;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 .contactsSocialUsername {
@@ -1081,7 +1105,7 @@
   display: block;
   pointer-events: none;
   /* Покачивание листика с задержкой */
-  animation: leafWiggle 2.5s ease-in-out infinite;
+  animation: leafWiggleRotated 2.5s ease-in-out infinite;
   animation-delay: 1.2s;
 }
 
@@ -1191,6 +1215,18 @@
   }
 }
 
+@keyframes leafWiggleRotated {
+  0%, 100% {
+    transform: rotate(90deg);
+  }
+  25% {
+    transform: rotate(95deg);
+  }
+  75% {
+    transform: rotate(87deg);
+  }
+}
+
 @keyframes cowPop {
   0% {
     opacity: 0;
@@ -1216,8 +1252,8 @@
   }
 
   .sunContainer {
-    top: -30px;
-    right: -30px;
+    top: -110px;
+    right: -100px;
     width: 400px;
     height: 400px;
   }
@@ -1330,18 +1366,22 @@
 }
 
 .footerGrass {
-  width: 100%;
+  width: 100vw;
   position: relative;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   overflow: hidden;
   margin-top: 40px;
+  margin-left: 0;
+  margin-right: 0;
+  height: 80px;
 }
 
 .footerGrassImage {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
-  object-position: bottom;
+  object-position: top;
 }

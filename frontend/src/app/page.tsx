@@ -23,7 +23,7 @@ export default function Home() {
           <a href="/" className={styles.logoLink} aria-label="На главную">
             <div className={styles.logo}>
               <Image
-                src="/img/logo.svg"
+                src="/img/main/logo.webp"
                 alt="Логотип «Лучик»"
                 width={260}
                 height={80}
@@ -59,36 +59,51 @@ export default function Home() {
 
             <div className={styles.navbarRight}>
               <div className={styles.socials}>
-                <Image
-                  src="/img/socials.svg"
-                  alt="Социальные сети"
-                  width={96}
-                  height={24}
-                  className={styles.socialsImage}
-                />
-                <div className={styles.socialsLinks}>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.socialIconLink}
-                    aria-label="Мы в Instagram"
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.socialIconLink}
+                  aria-label="Мы в Instagram"
+                >
+                  <Image
+                    src="/img/socseti/inst.svg"
+                    alt="Instagram"
+                    width={32}
+                    height={32}
+                    className={styles.socialIcon}
                   />
-                  <a
-                    href="https://vk.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.socialIconLink}
-                    aria-label="Мы во ВКонтакте"
+                </a>
+                <a
+                  href="https://vk.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.socialIconLink}
+                  aria-label="Мы во ВКонтакте"
+                >
+                  <Image
+                    src="/img/socseti/vk.svg"
+                    alt="ВКонтакте"
+                    width={32}
+                    height={32}
+                    className={styles.socialIcon}
                   />
-                  <a
-                    href="https://ok.ru"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.socialIconLink}
-                    aria-label="Мы в Одноклассниках"
+                </a>
+                <a
+                  href="https://ok.ru"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.socialIconLink}
+                  aria-label="Мы в Одноклассниках"
+                >
+                  <Image
+                    src="/img/socseti/ok.svg"
+                    alt="Одноклассники"
+                    width={32}
+                    height={32}
+                    className={styles.socialIcon}
                   />
-                </div>
+                </a>
               </div>
             </div>
           </nav>
@@ -96,7 +111,7 @@ export default function Home() {
           {/* Большие тучи по низу шапки */}
           <div className={styles.clouds}>
             <Image
-              src="/img/clouds.svg"
+              src="/img/main/clouds.webp"
               alt="Тучи"
               width={1480}
               height={338}
@@ -108,7 +123,7 @@ export default function Home() {
           {/* Маленькое облако под логотипом */}
           <div className={styles.cloudOne}>
             <Image
-              src="/img/cloud-1.svg"
+              src="/img/main/cloud-1.webp"
               alt="Облако"
               width={174}
               height={138}
@@ -119,7 +134,7 @@ export default function Home() {
           {/* Пчела слева внизу */}
           <div className={styles.bee}>
             <Image
-              src="/img/bee.svg"
+              src="/img/main/bee.webp"
               alt="Пчела"
               width={88}
               height={92}
@@ -130,7 +145,7 @@ export default function Home() {
           {/* Облако 2 справа внизу */}
           <div className={styles.cloudTwo}>
             <Image
-              src="/img/cloud-2.svg"
+              src="/img/main/cloud-2.webp"
               alt="Облако"
               width={200}
               height={120}
@@ -140,7 +155,7 @@ export default function Home() {
 
           <div className={styles.sunContainer}>
             <Image 
-              src="/img/sun.svg" 
+              src="/img/main/sun.webp" 
               alt="sun" 
               width={100} 
               height={100}
@@ -153,7 +168,7 @@ export default function Home() {
 
       <section className={styles.mainTitleSection}>
         <Image
-          src="/img/title.svg"
+          src="/img/main/title.webp"
           alt="Детский центр современных знаний"
           width={873}
           height={176}
@@ -170,7 +185,7 @@ export default function Home() {
           вашего ребёнка!
         </p>
         <Image
-          src="/img/ladybug.svg"
+          src="/img/main/ladybug.webp"
           alt="Божья коровка"
           width={80}
           height={80}
@@ -182,7 +197,7 @@ export default function Home() {
       <section className={styles.ctaSection}>
         <button className={styles.ctaButton} type="button">
           <Image
-            src="/img/cta-button.svg"
+            src="/img/main/cta-button.webp"
             alt="Оставить заявку"
             width={371}
             height={82}
@@ -201,21 +216,21 @@ export default function Home() {
             <div className={styles.contactsPanelHeader}>
               <div className={styles.contactsCloudContainer}>
                 <Image
-                  src="/img/облако-белое.svg"
+                  src="/img/main/облако-белое.webp"
                   alt="Облако"
                   width={250}
                   height={125}
                   className={styles.contactsCloud}
                 />
                 <Image
-                  src="/img/слово-контакты.svg"
+                  src="/img/main/слово-контакты.webp"
                   alt="Контакты"
                   width={122}
                   height={23}
                   className={styles.contactsPanelTitle}
                 />
                 <Image
-                  src="/img/малое-облако.svg"
+                  src="/img/main/малое-облако.webp"
                   alt="Малое облако"
                   width={110}
                   height={60}
@@ -236,7 +251,7 @@ export default function Home() {
                   <rect opacity="0.65" width="291" height="225" rx="22" fill="white"/>
                 </svg>
                 <Image
-                  src="/img/conacts/коровка.svg"
+                  src="/img/conacts/коровка.webp"
                   alt="Коровка"
                   width={78}
                   height={78}
@@ -246,7 +261,7 @@ export default function Home() {
                   <div className={styles.contactItem}>
                     <div className={styles.contactIcon}>
                       <img
-                        src="/img/conacts/adress2.svg"
+                        src="/img/conacts/adress2.webp"
                         alt="Адрес"
                         width={20}
                         height={26}
@@ -262,7 +277,7 @@ export default function Home() {
                   <div className={styles.contactItem}>
                     <div className={styles.contactIcon}>
                       <img
-                        src="/img/conacts/adress2.svg"
+                        src="/img/conacts/adress2.webp"
                         alt="Адрес"
                         width={20}
                         height={26}
@@ -278,7 +293,7 @@ export default function Home() {
                   <div className={styles.contactItem}>
                     <div className={styles.contactIcon}>
                       <img
-                        src="/img/conacts/mail.svg"
+                        src="/img/conacts/mail.webp"
                         alt="Email"
                         width={25}
                         height={25}
@@ -294,7 +309,7 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src="/img/conacts/лист1.svg"
+              src="/img/conacts/лист1.webp"
               alt="Листик"
               width={61}
               height={75}
@@ -306,49 +321,56 @@ export default function Home() {
             <div className={styles.contactsSocials}>
               <div className={styles.contactsSocialItem}>
                 <div className={styles.contactsSocialIconContainer}>
-                  <Image
-                    src="/img/socials.svg"
-                    alt="Instagram"
-                    width={96}
-                    height={24}
-                    className={styles.contactsSocialsImage}
-                  />
                   <a
                     href="https://instagram.com/lu4ik_lida"
                     target="_blank"
                     rel="noreferrer"
                     className={styles.contactsSocialIconLink}
                     aria-label="Instagram"
-                    style={{ left: '0', width: '24px' }}
-                  />
+                  >
+                    <Image
+                      src="/img/socseti/inst.svg"
+                      alt="Instagram"
+                      width={32}
+                      height={32}
+                      className={styles.contactsSocialIcon}
+                    />
+                  </a>
                 </div>
                 <div className={styles.contactsSocialUsername}>lu4ik_lida</div>
               </div>
               <div className={styles.contactsSocialItem}>
                 <div className={styles.contactsSocialIconContainer}>
-                  <Image
-                    src="/img/socials.svg"
-                    alt="VK and Odnoklassniki"
-                    width={96}
-                    height={24}
-                    className={styles.contactsSocialsImage}
-                  />
                   <a
                     href="https://vk.com/luchiklida"
                     target="_blank"
                     rel="noreferrer"
                     className={styles.contactsSocialIconLink}
                     aria-label="VK"
-                    style={{ left: '36px', width: '24px' }}
-                  />
+                  >
+                    <Image
+                      src="/img/socseti/vk.svg"
+                      alt="ВКонтакте"
+                      width={32}
+                      height={32}
+                      className={styles.contactsSocialIcon}
+                    />
+                  </a>
                   <a
                     href="https://ok.ru/luchiklida"
                     target="_blank"
                     rel="noreferrer"
                     className={styles.contactsSocialIconLink}
                     aria-label="Odnoklassniki"
-                    style={{ left: '72px', width: '24px' }}
-                  />
+                  >
+                    <Image
+                      src="/img/socseti/ok.svg"
+                      alt="Одноклассники"
+                      width={32}
+                      height={32}
+                      className={styles.contactsSocialIcon}
+                    />
+                  </a>
                 </div>
                 <div className={styles.contactsSocialUsername}>luchiklida</div>
               </div>
@@ -370,7 +392,7 @@ export default function Home() {
                   <div className={styles.contactsScheduleLine}>Сб,Вс с 10.00 до 18.00</div>
                 </div>
                 <Image
-                  src="/img/conacts/лист2.svg"
+                  src="/img/conacts/лист2.webp"
                   alt="Лист"
                   width={78}
                   height={68}
@@ -394,21 +416,21 @@ export default function Home() {
         <div className={styles.footerContent}>
           <div className={styles.footerLogo}>
             <Image
-              src="/img/footer/logo.svg"
+              src="/img/footer/logo.webp"
               alt="Логотип Лучик"
               width={180}
               height={60}
               className={styles.footerLogoImage}
             />
             <Image
-              src="/img/footer/pchela.svg"
+              src="/img/footer/pchela.webp"
               alt="Пчела"
               width={60}
               height={60}
               className={styles.footerBee}
             />
             <Image
-              src="/img/footer/oblako1.svg"
+              src="/img/footer/oblako1.webp"
               alt="Облако"
               width={80}
               height={50}
@@ -418,7 +440,7 @@ export default function Home() {
         </div>
         <div className={styles.footerGrass}>
           <Image
-            src="/img/footer/grass.svg"
+            src="/img/footer/grass.webp"
             alt="Трава"
             width={1440}
             height={100}

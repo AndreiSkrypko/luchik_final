@@ -1,7 +1,0 @@
-<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <text x="5" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2D3748">«Лучик»</text>
-  <circle cx="105" cy="20" r="12" fill="#FFD93D"/>
-  <circle cx="105" cy="20" r="8" fill="#2D3748"/>
-  <ellipse cx="103" cy="18" rx="2" ry="3" fill="white"/>
-</svg>
-

@@ -55,7 +55,7 @@ export default function TrainersPage() {
           <Link href="/" className={styles.logoLink} aria-label="На главную">
             <div className={styles.logo}>
               <Image
-                src="/img/logo.svg"
+                src="/img/main/logo.webp"
                 alt="Логотип «Лучик»"
                 width={260}
                 height={80}
