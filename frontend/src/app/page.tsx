@@ -418,15 +418,15 @@ export default function Home() {
             <Image
               src="/img/footer/logo.webp"
               alt="Логотип Лучик"
-              width={180}
-              height={60}
+              width={240}
+              height={80}
               className={styles.footerLogoImage}
             />
             <Image
               src="/img/footer/pchela.webp"
               alt="Пчела"
-              width={60}
-              height={60}
+              width={45}
+              height={45}
               className={styles.footerBee}
             />
             <Image
@@ -439,21 +439,54 @@ export default function Home() {
           </div>
           <div className={styles.footerNav}>
           <div className={styles.footerNavLeft}>
+            <Image
+              src="/img/footer/oblako2.svg"
+              alt="Облако 2"
+              width={120}
+              height={70}
+              className={styles.footerCloud2}
+            />
             <div className={styles.footerNavItem}>
-              <Image
-                src="/img/footer/samolet.svg"
-                alt="Самолет"
-                width={23}
-                height={22}
-                className={styles.footerNavIcon}
-              />
-              <span className={styles.footerNavText}>Главная</span>
+              <div className={styles.footerNavItemWrapper}>
+                <svg
+                  width="372"
+                  height="34"
+                  viewBox="0 0 372 34"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={styles.footerNavItemFrame}
+                >
+                  <rect x="1" y="1" width="370" height="32" rx="16" stroke="#D6E7F9" strokeWidth="2"/>
+                </svg>
+                <div className={styles.footerNavItemContent}>
+                  <Image
+                    src="/img/footer/samolet.svg"
+                    alt="Самолет"
+                    width={23}
+                    height={22}
+                    className={styles.footerNavIcon}
+                  />
+                  <span className={styles.footerNavText}>Главная</span>
+                </div>
+              </div>
             </div>
-            <div className={styles.footerNavLink}>О нас</div>
-            <div className={styles.footerNavLink}>Направление</div>
-            <div className={styles.footerNavLink}>Рассписание</div>
-            <div className={styles.footerNavLink}>Абонементы</div>
-            <div className={styles.footerNavLink}>Контакты</div>
+            <div className={styles.footerNavLinks}>
+              <div className={styles.footerNavLinksColumn}>
+                <a href="#about" className={styles.footerNavLink}>О нас</a>
+                <a href="#directions" className={styles.footerNavLink}>Направления</a>
+                <a href="/gallery" className={styles.footerNavLink}>Галерея</a>
+              </div>
+              <div className={styles.footerNavLinksColumn}>
+                <a href="/trainers" className={styles.footerNavLink}>Тренажеры</a>
+                <button 
+                  onClick={toggleContacts}
+                  className={styles.footerNavLink}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, textAlign: 'left' }}
+                >
+                  Контакты
+                </button>
+              </div>
+            </div>
           </div>
           <div className={styles.footerNavDivider}></div>
           <div className={styles.footerNavRight}>
@@ -474,8 +507,8 @@ export default function Home() {
                 <Image
                   src="/img/socseti/inst.svg"
                   alt="Instagram"
-                  width={40}
-                  height={40}
+                  width={32}
+                  height={32}
                   className={styles.footerSocialIcon}
                 />
               </a>
@@ -483,8 +516,8 @@ export default function Home() {
                 <Image
                   src="/img/socseti/vk.svg"
                   alt="VK"
-                  width={40}
-                  height={40}
+                  width={32}
+                  height={32}
                   className={styles.footerSocialIcon}
                 />
               </a>
@@ -492,12 +525,19 @@ export default function Home() {
                 <Image
                   src="/img/socseti/ok.svg"
                   alt="Odnoklassniki"
-                  width={40}
-                  height={40}
+                  width={32}
+                  height={32}
                   className={styles.footerSocialIcon}
                 />
               </a>
             </div>
+            <Image
+              src="/img/footer/oblako3.svg"
+              alt="Облако 3"
+              width={180}
+              height={100}
+              className={styles.footerCloud3}
+            />
           </div>
           </div>
         </div>

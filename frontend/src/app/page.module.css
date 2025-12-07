@@ -1334,37 +1334,65 @@
   max-width: 1303px;
   margin: 0 auto;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   padding-bottom: 0;
   position: relative;
-  gap: 100px;
+  gap: 60px;
 }
 
 .footerLogo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  position: relative;
 }
 
 .footerLogoImage {
-  width: 180px;
+  width: 240px;
   height: auto;
   display: block;
-  margin-top: -10px;
+  margin-top: 0;
 }
 
 .footerBee {
-  width: 45px;
+  position: absolute;
+  width: 50px;
   height: auto;
-  margin-left: 15px;
-  margin-top: -55px;
+  top: -20px;
+  left: 300px;
+  z-index: 2;
+  transform: scaleX(-1);
 }
 
 .footerCloud {
-  width: 80px;
+  position: absolute;
+  width: 90px;
   height: auto;
-  margin-left: 10px;
-  margin-top: 50px;
+  bottom: -85px;
+  left: 180px;
+  z-index: 1;
+}
+
+.footerCloud2 {
+  position: absolute;
+  top: 70px;
+  right: -40px;
+  width: 120px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  filter: brightness(0.94);
+}
+
+.footerCloud3 {
+  position: absolute;
+  top: 0;
+  right: -150px;
+  width: 180px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .footerNav {
@@ -1374,72 +1402,132 @@
   gap: 0;
   background: white;
   border-top: none;
-  margin-left: 150px;
+  position: relative;
+  justify-content: center;
+  min-width: 0;
 }
 
 .footerNavLeft {
-  flex: 0 0 250px;
+  flex: 0 0 auto;
   padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 372px;
 }
 
 .footerNavRight {
-  flex: 1;
-  padding-left: 30px;
+  flex: 0 0 auto;
+  padding-left: 0;
+  margin-left: 60px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  position: relative;
+  min-width: 220px;
 }
 
 .footerNavDivider {
   width: 1px;
   background: #DADADA;
-  margin: 0 20px;
+  margin: 0 30px 0 90px;
+  align-self: stretch;
 }
 
 .footerNavItem {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 16px;
-  background: #E8F4FD;
-  border: 1px solid #B8D9F0;
-  border-radius: 8px;
+  position: relative;
   margin-bottom: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
+.footerNavItemWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 372px;
+  height: 34px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footerNavItemFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 372px;
+  height: 34px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footerNavItemContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
 .footerNavItem:hover {
-  background: #D6E7F9;
   transform: translateX(2px);
 }
 
+.footerNavItem:hover .footerNavItemFrame rect {
+  stroke: #B8D9F0;
+}
+
+.footerNavLinks {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+  width: 372px;
+  justify-content: center;
+}
+
+.footerNavLinksColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
 .footerNavIcon {
-  width: 23px;
-  height: 22px;
+  width: 20px;
+  height: 19px;
   flex-shrink: 0;
 }
 
 .footerNavText {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: #333;
 }
 
 .footerNavLink {
-  padding: 8px 0;
-  padding-left: 20px;
-  font-size: 16px;
+  padding: 6px 0;
+  padding-left: 0;
+  font-size: 14px;
   color: #777777;
   cursor: pointer;
   position: relative;
   transition: color 0.3s ease;
+  text-decoration: none;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: left;
+  display: block;
 }
 
 .footerNavLink::before {
   content: '•';
   position: absolute;
-  left: 0;
+  left: -15px;
   color: #DADADA;
 }
 
@@ -1447,21 +1535,18 @@
   color: #333;
 }
 
-.footerNavLink:nth-last-child(2),
-.footerNavLink:last-child {
-  padding-left: 30px;
-}
-
 .footerAddress {
-  font-size: 16px;
+  font-size: 14px;
   color: #777777;
-  line-height: 1.6;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
 .footerSchedule {
-  font-size: 16px;
+  font-size: 14px;
   color: #777777;
-  line-height: 1.6;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
 .footerSocials {
@@ -1474,8 +1559,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -1497,7 +1582,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  overflow: hidden;
+  overflow: visible;
   margin-top: 40px;
   margin-left: 0;
   margin-right: 0;
@@ -1514,17 +1599,18 @@
 
 .footerBushLeft {
   position: absolute;
-  bottom: -20px;
+  bottom: 5px;
   left: 20%;
   z-index: 2;
   width: 178px;
   height: auto;
   object-fit: contain;
+  top: auto;
 }
 
 .footerBushRight {
   position: absolute;
-  bottom: 5px;
+  bottom: 25px;
   right: 20%;
   z-index: 2;
   width: 178px;
